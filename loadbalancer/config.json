@@ -1,0 +1,21 @@
+{
+    "servers": [
+        {
+            "url": "http://localhost:8001",
+            "weight": 1,
+            "healthCheckURL": "/health",
+            "failureThreshold": 3
+        },
+        {
+            "url": "http://localhost:8002",
+            "weight": 1,
+            "healthCheckURL": "/health",
+            "failureThreshold": 3
+        }
+    ],
+    "algorithm": "round-robin",
+    "healthCheckInterval": "10s",
+    "enableRetry": true,
+    "maxRetries": 3,
+    "timeout": "5s"
+}
